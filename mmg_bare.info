@@ -1,0 +1,28 @@
+name = MMG Bare (Bare Subtheme)
+description = This subtheme of the bare base theme. This theme is to act as a skelton for awesomeness
+core = 7.x
+base = bare
+
+stylesheets[all][] = css/fonts/fonts.css
+stylesheets[all][] = css/style.css
+stylesheets[print][] = css/print.css
+; scripts[] = js/minified/vso.min.js
+
+; ========================================
+; Breakpoints
+; ========================================
+breakpoints[largest] = (min-width:2000px)
+breakpoints[xxxlarge] = (min-width:1700px)
+breakpoints[xxlarge] = (min-width:1400px)
+breakpoints[xlarge] = (min-width:1279px)
+breakpoints[largeish] = (min-width:1150px)
+breakpoints[large] = (min-width:1022px)
+breakpoints[mediumish] = (min-width: 960px)
+breakpoints[medium] = (min-width: 760px)
+breakpoints[smallish] = (min-width:600px)
+breakpoints[small] = (min-width:480px)
+breakpoints[xsmall] = (min-width: 320px)
+breakpoints[xxsmall] = (min-width: 0)
+
+
+

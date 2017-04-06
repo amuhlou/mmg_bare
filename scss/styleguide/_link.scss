@@ -1,0 +1,57 @@
+// scss-lint:disable EmptyRule
+
+// Link
+a {
+  @include transition(all 0.5s);
+  color: $link;
+
+  &:visited {
+    color: $visited;
+  }
+
+  &:hover,
+  &:focus {
+
+  }
+
+  &:active,
+  &.active {
+
+  }
+}
+
+//
+// Links
+//
+li a {
+  &.active {
+
+  }
+}
+
+//
+// Mark, new
+//
+.marker {
+  a {
+
+  }
+}
+
+//
+// More help link
+//
+.more-help-link {
+  a {
+
+  }
+}
+
+ //
+ // More link
+ //
+.more-link {
+  a {
+
+  }
+}

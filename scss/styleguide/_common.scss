@@ -1,0 +1,126 @@
+
+// scss-lint:disable EmptyRule
+
+//
+// B
+//
+b {
+  @extend strong;
+}
+
+//
+// Delete
+//
+del {
+
+}
+
+//
+// Emphasis
+//
+em {
+  font-style: italic;
+}
+
+//
+// Figcaption
+//
+figcaption {
+
+}
+
+//
+// Figure
+//
+figure {
+
+}
+
+//
+// hr
+//
+hr {
+  background-color: $black;
+  height: 1px;
+  margin: 4rem 0;
+}
+
+//
+// Italic
+//
+i {
+  @extend em;
+}
+
+//
+// Quote
+//
+q {
+
+}
+
+//
+// Strikethrough
+//
+s {
+
+}
+
+//
+// Small
+//
+small {
+
+}
+
+//
+// Strong
+//
+strong {
+  font-weight: bold;
+}
+
+//
+// Subscript
+//
+sub {
+
+}
+
+//
+// Superscript
+//
+sup {
+
+}
+
+//
+// Underline
+//
+u {
+
+}
+
+//
+// Messages
+//
+.messages {
+  //
+  // Status message
+  //
+  &.status {
+
+  }
+  //
+  // Warning message
+  //
+  &.warning {
+
+  }
+  //
+  // Error message
+  //
+  &.error {
+
+  }
+}

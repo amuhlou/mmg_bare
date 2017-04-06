@@ -1,0 +1,9 @@
+#main-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.4rem;
+
+  @media #{$mobile-nav} {
+    margin-top: 0;
+  }
+}

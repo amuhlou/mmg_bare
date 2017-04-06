@@ -1,0 +1,142 @@
+//
+// Mixins Partials
+//
+// All of your mixins should go in this file.
+//
+
+@mixin clear() {
+  &:before,
+  &:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin rem($size, $attribute:font-size) {
+  #{$attribute}: ($size * 10) + px;
+  #{$attribute}: $size + rem;
+}
+
+@mixin rebase() {
+  @include rem($base-font-size);
+  color: $base-font-color;
+  font-weight: normal;
+  line-height: $base-line-height;
+}
+
+//This is a friendly mixin, not used unless you use it.
+@mixin sticky-footer($height:125px) {
+  html,
+  body {
+    height: 100%;
+  }
+
+  #main-region {
+    min-height: 100%;
+    // equal to footer height
+    margin-bottom: -($height);
+
+    &:after {
+      content: '';
+      display: block;
+    }
+  }
+
+  #footer,
+  #main-region:after {
+    // the after must be the same height as footer
+    height: $height;
+  }
+}
+
+// From:
+// smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/
+@mixin link-colors ($link, $visited, $hover, $active) {
+  color: $link;
+
+  &:visited {
+    color: $visited;
+  }
+
+  &:hover {
+    color: $hover;
+  }
+
+  &:active,
+  &:focus {
+    color: $active;
+  }
+}
+
+@mixin slick-defaults () {
+    // Next/prev arrows
+  .slick-arrow {
+    @include transition(all 0.5s);
+    @include box-shadow(rgba($black, 0.35) 0 0 5px);
+    background-image: image-url('blue-triangle-right2.svg');
+    background-position: 22px center;
+    background-repeat: no-repeat;
+    background-size: auto 20px;
+    background-color: $white;
+    border: 0;
+    height: 5rem;
+    margin: 0;
+    overflow: hidden;
+    padding: 2rem;
+    text-indent: -5555px;
+    width: 5rem;
+    z-index: 2;
+
+    &:hover {
+      background-color: $bright-blue;
+      background-image: image-url('white-triangle-right2.svg');
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &.slick-prev {
+      @include transform(rotate(180deg));
+      left: 0;
+
+      @media #{$small} {
+        left: -2rem;
+      }
+    }
+
+    &.slick-next {
+      right: 0;
+
+      @media #{$small} {
+        right: -2rem;
+      }
+    }
+  }
+}
+
+// https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

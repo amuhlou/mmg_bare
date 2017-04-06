@@ -1,0 +1,14 @@
+@import 'header/header';
+@import 'footer/footer';
+@import 'main-wrapper/main-wrapper';
+
+// If you have questions about this: Ask Paul Irish.
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*,
+*::before,
+*::after {
+  // Uncomment vendor prefixes, or replace with compass helper
+  // -moz-box-sizing: border-box;
+  // -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }

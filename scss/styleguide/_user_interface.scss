@@ -1,0 +1,46 @@
+body {
+  margin: -4px 0 0;
+
+  &.admin-menu {
+    // scss-lint:disable ImportantRule
+    margin-top: 4.1rem !important;
+
+    @media screen and (min-width: 1020px) {
+      margin-top: 2.1rem !important;
+    }
+  }
+}
+
+.page-search,
+.page-user,
+.page-admin-appearance-styleguide {
+  #main {
+    @extend %container-1170;
+  }
+}
+
+/**
+ * CKeditor Styles
+ */
+
+// Front-end
+.align-left {
+  float: left;
+  margin-right: 3rem;
+}
+
+.align-right {
+  float: right;
+  margin-left: 3rem;
+}
+
+.align-center {
+  display: block;
+  margin: 3rem auto;
+}
+
+// Admin
+.cke_widget_inline {
+  // scss-lint:disable ImportantRule
+  display: inline !important;
+}

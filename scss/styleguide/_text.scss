@@ -1,0 +1,77 @@
+// scss-lint:disable EmptyRule
+
+// General Text Formatting
+html {
+  //Uncomment below if you would like to use rems
+  font-size: 62.5%;
+}
+
+body {
+  //This will make text pretty across browsers
+  //and match what clients tend to want
+  // text-rendering: optimizeLegibility;
+  // -webkit-font-smoothing: antialiased;
+  //If speed is a concern uncomment.
+  //text-rendering: optimizeSpeed;
+  // -webkit-font-smoothing: none;
+  // -webkit-font-smoothing: subpixel-antialiased;
+  @include rem($base-font-size);
+  font-family: $font-body;
+  //This mixin will allow for rems but defaults to px.
+  line-height: $base-line-height;
+  color: $base-font-color;
+}
+
+// Blockquote
+blockquote {
+
+}
+
+// Headings
+#{headings()} {
+
+}
+
+h1 {
+  @include rem($h1-size);
+  color: $h1-color;
+  line-height: $h1-line-height;
+  margin: $h1-margin;
+  text-align: center;
+}
+
+h2 {
+  @include rem($h2-size);
+  color: $h2-color;
+  line-height: $h2-line-height;
+  margin: $h2-margin;
+  text-align: center;
+}
+
+h3 {
+  @include rem($h3-size);
+  color: $h3-color;
+  line-height: $h3-line-height;
+  margin: $h3-margin;
+}
+
+h4 {
+  @include rem($h4-size);
+  color: $h4-color;
+  line-height: $h4-line-height;
+  margin: $h4-margin;
+}
+
+h5 {
+  @include rem($h5-size);
+  color: $h5-color;
+  line-height: $h5-line-height;
+  margin: $h5-margin;
+}
+
+h6 {
+  @include rem($h6-size);
+  color: $h6-color;
+  line-height: $h6-line-height;
+  margin: $h6-margin;
+}

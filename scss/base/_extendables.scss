@@ -1,0 +1,15 @@
+// 1rem = 10px
+%container-960 {
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+%container-1170 {
+  max-width: 117rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media #{$medium} {
+    padding: 0 1rem;
+  }
+}

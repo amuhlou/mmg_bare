@@ -1,0 +1,9 @@
+# Common files to ignore.
+.DS_Store
+.~*
+._*
+
+# Theme files to ignore.
+.sass-cache*
+Gemfile.lock
+node_modules
