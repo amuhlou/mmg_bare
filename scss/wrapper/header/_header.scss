@@ -1,6 +1,77 @@
 #header {
-//
+  background-color: $white;
+  border-bottom: 1px solid $mmg-light-gray;
+  padding: 1rem;
+
+  .element-invisible {
+    font-size: 0;
+  }
+
+  > .container {
+    @extend %container-1170;
+
+    @media #{$medium-ish} {
+      @include flexbox((
+        display: flex,
+        justify-content: space-between,
+      ));
+    }
+  }
+  // General Menu Layout Stuff
+  #header-menus-small {
+    > * {
+      display: inline-block;
+
+      @media #{$medium-ish} {
+        display: none;
+      }
+    }
+  }
+
+  #header-menus-large {
+    text-align: right;
+
+    ul {
+      li {
+        display: inline-block;
+      }
+    }
+
+    @media #{$medium-ish} {
+      @include flex-grow(1);
+    }
+
+    #secondary-menu--large {
+      display: none;
+
+      @media #{$medium-ish} {
+        display: inline-block;
+      }
+    }
+
+    #main-menu--large {
+      ul {
+        display: none;
+
+        @media #{$medium-ish} {
+          display: inline-block;
+        }
+      }
+
+      @media #{$medium-ish} {
+        @include flexbox((
+          display: flex,
+          justify-content: flex-end,
+        ));
+      }
+    }
+  }
+}
+
+html.js #header div.contextual-links-wrapper {
+  display: none;
 }
 
 @import 'hamburger';
 @import 'menus';
+@import 'search';

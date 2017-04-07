@@ -1,1 +1,33 @@
-//
+#header {
+  .nav-toggle {
+    @media #{$medium-ish} {
+      display: none;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  #main-menu--large,
+  #main-menu--small {
+    a {
+      @include rem(1.8);
+    }
+  }
+
+  #secondary-menu--large,
+  #secondary-menu--small {
+    a {
+      @include rem(1.4);
+    }
+  }
+
+}

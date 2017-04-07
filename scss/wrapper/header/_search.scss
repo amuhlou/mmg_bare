@@ -1,0 +1,41 @@
+#header {
+  .search-toggle {
+    background: transparent;
+    border: 0;
+    display: block;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    background-image: image-url('search.svg');
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: right;
+    margin: 0;
+
+    &.search-toggle--large {
+      display: none;
+
+      @media #{$medium-ish} {
+        background-size: 15px 15px;
+        display: inline-block;
+        width: 3rem;
+        height: 3.5rem;
+      }
+    }
+
+    &.search-toggle--small {
+      display: inline-block;
+
+      @media #{$medium-ish} {
+        display: none;
+      }
+    }
+  }
+
+  .search-wrap {
+    &.closed {
+      display: none;
+    }
+  }
+}

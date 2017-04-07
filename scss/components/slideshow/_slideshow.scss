@@ -1,3 +1,7 @@
 .asset-slideshow {
-//
+  // configure at scss/base/_mixins.scss
+  .slick-arrows {
+    @include slick-defaults();
+    position: relative;
+  }
 }

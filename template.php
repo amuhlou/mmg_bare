@@ -38,17 +38,19 @@ function mmg_bare_preprocess_page(&$vars) {
   // One for desktop, one for mobile
   $main_menu_tree = menu_tree_all_data('main-menu');
   $main_menu_nav = menu_tree_output($main_menu_tree);
-  $vars['rendered_main_menu_nav'] = $main_menu_nav;
-  $main_menu_tree_desktop = menu_tree_all_data('main-menu');
-  $main_menu_nav_desktop = menu_tree_output($main_menu_tree_desktop);
-  $vars['rendered_main_menu_nav_desktop'] = $main_menu_nav_desktop;
+  $vars['main_menu_small'] = $main_menu_nav;
+  $main_menu_tree_large = menu_tree_all_data('main-menu');
+  $main_menu_nav_large = menu_tree_output($main_menu_tree_large);
+  $vars['main_menu_large'] = $main_menu_nav_large;
 
-  // Secondary Menu
-  // as a place holder, use built in "navigation" menu
-  // change 'navigation' to your menu's machine name below
-  $header_secondary_menu_tree = menu_tree_all_data('navigation');
+  // Render Quick Links Menu
+  // Replace 'main-menu' with the machine name of your secondary menu
+  $header_secondary_menu_tree = menu_tree_all_data('user-menu');
   $header_secondary_menu_nav = menu_tree_output($header_secondary_menu_tree);
-  $vars['rendered_header_secondary_menu'] = $header_secondary_menu_nav;
+  $vars['secondary_menu_small'] = $header_secondary_menu_nav;
+  $header_secondary_menu_tree_desktop = menu_tree_all_data('user-menu');
+  $header_secondary_menu_desktop = menu_tree_output($header_secondary_menu_tree_desktop);
+  $vars['secondary_menu_large'] = $header_secondary_menu_desktop;
 
   // Search form.
   $search_form = block_load('search', 'form');

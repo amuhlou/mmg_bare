@@ -6,7 +6,7 @@ base = bare
 stylesheets[all][] = css/fonts/fonts.css
 stylesheets[all][] = css/style.css
 stylesheets[print][] = css/print.css
-; scripts[] = js/minified/vso.min.js
+scripts[] = js/minified/mmg.min.js
 
 ; ========================================
 ; Breakpoints

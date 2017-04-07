@@ -16,6 +16,13 @@ $gray-30: lighten($black, 0.7);
 $gray-20: lighten($black, 0.8);
 $gray-10: lighten($black, 0.9);
 
+// MMG Colors
+$mmg-black:        #030708;
+$mmg-light-blue:   #0095d5;
+$mmg-dark-blue:    #0074bb;
+$mmg-orange:       #f47920;
+$mmg-light-gray:   #999;
+
 // Style Guide Colors
 
 
@@ -35,14 +42,14 @@ $helvetica:       Helvetica, Arial, sans-serif;
 $arial:           Arial, Helvetica, sans-serif;
 $courier:         "Courier New", monospace, sans-serif;
 
-// Theme Specific Fonts
-/*
- Use font-weights for variants
- 200: extra light, 300: light, 400: regular, 600: semi-bold
- 700: bold, 900: black
-*/
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i);
-$sourcesans: 'Source Sans Pro', sans-serif;
+// MMG Fonts
+// These are just for starters, comment them out if you don't need them.
+@import url('//fonts.googleapis.com/css?family=Merriweather+Sans:400,400i,700,700i');
+
+$merriweathersans: "Merriweather Sans", Helvetica, sans-serif;
+
+// Styleguide Specific Fonts
+
 
 
 //
@@ -55,7 +62,7 @@ $sourcesans: 'Source Sans Pro', sans-serif;
 //
 $base-font-size: 1.6;
 $base-line-height: 1.625;
-$base-font-color: $black;
+$base-font-color: $mmg-black;
 //
 //  Heading Variables.//
 // To make use of these: visit styleguide/_text.scss
@@ -101,10 +108,10 @@ $h5-margin: $h4-margin;
 $h6-margin: $h4-margin;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $sourcesans; // The font family set on the html element.
-$font-body:        $sourcesans;
+$base-font-family: $merriweathersans; // The font family set on the html element.
+$font-body:        $merriweathersans;
 $font-monospace:   $courier;
-$form-font-family: $sourcesans;
+$form-font-family: $merriweathersans;
 
 
 //
@@ -114,9 +121,9 @@ $form-font-family: $sourcesans;
 
 
 // Base color variables.
-$link           : $gray-90;
+$link           : $mmg-light-blue;
 $visited        : $link;
-$hover          : $link;
+$hover          : $mmg-dark-blue;
 $selection-bg   : #66b360;
 $selection      : $white;
 

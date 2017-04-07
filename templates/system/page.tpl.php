@@ -75,7 +75,28 @@
 <header id="header" class="wrapper clearfix">
   <div class="container clearfix">
     <?php print render($page['header']); ?>
-    <section id="logo-container" class="closed">
+    <section id="header-menus-small">
+      <div class="menu-wrapper">
+        <?php if ($main_menu_small): ?>
+        <nav id="main-menu--small" class="wrapper closed">
+          <?php print render($main_menu_small); ?>
+        </nav> <!-- /.section, /#navigation -->
+        <?php endif; ?>
+        <?php if ($secondary_menu_small): ?>
+        <nav id="secondary-menu--small" class="wrapper closed">
+          <?php print render($secondary_menu_small); ?>
+        </nav> <!-- /.section, /#navigation -->
+        <?php endif; ?>
+      </div>
+      <!-- Nav Toggle -->
+      <button type="button" class="nav-toggle hamburger hamburger--collapse">
+        <span class="element-invisible">Show Menu</span>
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </section><!-- /.section /#header-menus-small -->
+    <section id="header-logo">
       <?php if ($logo_header): ?>
         <?php if ($site_name): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t($site_name .': Home'); ?>" rel="home" id="logo">
@@ -87,47 +108,36 @@
         </a>
         <?php endif; ?>
       <?php endif; ?>
-      <?php if ($rendered_main_menu_nav_desktop): ?>
-      <nav id="navigation-desktop" class="wrapper closed">
-        <?php print render($rendered_main_menu_nav_desktop); ?>
-      </nav> <!-- /.section, /#navigation -->
-      <?php endif; ?>
-      <?php /* Nav Toggle */ ?>
-      <?php if ($rendered_main_menu_nav_desktop): ?>
-        <button type="button" class="nav-toggle hamburger hamburger--collapse">
-          <span class="element-invisible">Show Menu</span>
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-        </button>
-      <?php endif; ?>
-    </section>
-    <section id="nav-menus" class="wrapper closed">
-      <?php if ($rendered_main_menu_nav): ?>
-      <nav id="navigation" class="wrapper closed">
-        <?php print render($rendered_main_menu_nav); ?>
-      </nav> <!-- /.section, /#navigation -->
-      <?php endif; ?>
-      <?php if ($rendered_header_secondary_menu): ?>
-      <nav id="quicklinks" class="wrapper closed">
-        <?php if ($search_form): ?>
-        <button type="button" class="search-toggle closed"><span class="element-invisible">Search</span></button>
-        <div class="search-wrap closed">
-          <div class="site-search--form">
-            <?php print render($search_form);?>
-          </div>
-        </div>
-        <?php endif;?>
-        <?php print render($rendered_header_secondary_menu); ?>
-
-      </nav> <!-- /.section, /#navigation -->
-      <?php endif; ?>
+    </section> <!-- /.section, /#header-logo -->
+    <?php if ($search_form): ?>
+    <button type="button" class="search-toggle search-toggle--small closed"><span class="element-invisible">Search</span></button>
+    <div class="search-wrap closed">
+      <div class="site-search--form">
+        <?php print render($search_form);?>
+      </div>
+    </div>
+    <?php endif; ?>
+    <section id="header-menus-large">
+      <div class="menu-wrapper">
+        <?php if ($secondary_menu_large): ?>
+        <nav id="secondary-menu--large" class="wrapper closed">
+          <?php print render($secondary_menu_large); ?>
+        </nav> <!-- /.section, /#navigation -->
+        <?php endif; ?>
+        <?php if ($main_menu_large): ?>
+        <nav id="main-menu--large" class="wrapper closed">
+          <?php print render($main_menu_large); ?>
+          <?php if ($search_form): ?>
+            <button type="button" class="search-toggle search-toggle--large closed"><span class="element-invisible">Search</span></button>
+          <?php endif; ?>
+        </nav> <!-- /.section, /#navigation -->
+        <?php endif; ?>
+      </div>
     </section>
   </div> <!-- /.container, .clearfix -->
 </header> <!-- /.section, /#header -->
 
 <main id="main-wrapper"  class="wrapper clearfix">
-  <div class="overlay"></div>
   <div id="main" class="container clearfix">
     <?php if (user_is_logged_in()): ?>
       <?php print $messages; ?>
@@ -161,6 +171,7 @@
   </div>
 </main> <!-- /#main, /#main-wrapper -->
 <footer id="footer" class="footer">
-  <div class="overlay"></div>
+  <div class="inner">
   <?php print render($page['footer']); ?>
+  </div>
 </footer>

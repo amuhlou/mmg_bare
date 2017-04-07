@@ -30,31 +30,6 @@
   line-height: $base-line-height;
 }
 
-//This is a friendly mixin, not used unless you use it.
-@mixin sticky-footer($height:125px) {
-  html,
-  body {
-    height: 100%;
-  }
-
-  #main-region {
-    min-height: 100%;
-    // equal to footer height
-    margin-bottom: -($height);
-
-    &:after {
-      content: '';
-      display: block;
-    }
-  }
-
-  #footer,
-  #main-region:after {
-    // the after must be the same height as footer
-    height: $height;
-  }
-}
-
 // From:
 // smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/
 @mixin link-colors ($link, $visited, $hover, $active) {
@@ -79,23 +54,26 @@
   .slick-arrow {
     @include transition(all 0.5s);
     @include box-shadow(rgba($black, 0.35) 0 0 5px);
-    background-image: image-url('blue-triangle-right2.svg');
-    background-position: 22px center;
+    background-color: $white;
+    background-image: image-url('play_arrow_blue.svg');
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: auto 20px;
+    background-size: 30px 30px;
     background-color: $white;
     border: 0;
-    height: 5rem;
+    border-radius: 50%;
+    height: 3rem;
     margin: 0;
     overflow: hidden;
     padding: 2rem;
+    position: absolute;
     text-indent: -5555px;
-    width: 5rem;
+    width: 3rem;
     z-index: 2;
 
     &:hover {
-      background-color: $bright-blue;
-      background-image: image-url('white-triangle-right2.svg');
+      cursor: pointer;
+      background-image: image-url('play_arrow_orng.svg');
     }
 
     &:focus {

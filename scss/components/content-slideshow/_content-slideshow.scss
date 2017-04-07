@@ -1,4 +1,7 @@
 .asset-content-slideshow {
-//
+  // configure defaults at scss/base/_mixins.scss
+  .slick-arrows {
+    @include slick-defaults();
+  }
 }
 

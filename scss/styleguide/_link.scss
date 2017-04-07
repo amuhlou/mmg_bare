@@ -6,12 +6,12 @@ a {
   color: $link;
 
   &:visited {
-    color: $visited;
+
   }
 
   &:hover,
   &:focus {
-
+    color: $hover;
   }
 
   &:active,
@@ -25,7 +25,11 @@ a {
 //
 li a {
   &.active {
+    color: $link;
 
+    &:hover {
+      color: $hover;
+    }
   }
 }
 
