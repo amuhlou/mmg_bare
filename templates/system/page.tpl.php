@@ -76,14 +76,14 @@
   <div class="container clearfix">
     <?php print render($page['header']); ?>
     <section id="header-menus-small">
-      <div class="menu-wrapper">
+      <div class="menu-wrapper closed">
         <?php if ($main_menu_small): ?>
-        <nav id="main-menu--small" class="wrapper closed">
+        <nav id="main-menu--small" class="nav-wrapper closed">
           <?php print render($main_menu_small); ?>
         </nav> <!-- /.section, /#navigation -->
         <?php endif; ?>
         <?php if ($secondary_menu_small): ?>
-        <nav id="secondary-menu--small" class="wrapper closed">
+        <nav id="secondary-menu--small" class="nav-wrapper closed">
           <?php print render($secondary_menu_small); ?>
         </nav> <!-- /.section, /#navigation -->
         <?php endif; ?>
@@ -100,11 +100,11 @@
       <?php if ($logo_header): ?>
         <?php if ($site_name): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t($site_name .': Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo_header; ?>" alt="<?php print $site_name . t('Logo'); ?>" />
+          <img src="/<?php print $logo_header; ?>" alt="<?php print $site_name . t('Logo'); ?>" />
         </a>
         <?php else: ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo_header; ?>" alt="<?php print t('Logo'); ?>" />
+          <img src="/<?php print $logo_header; ?>" alt="<?php print t('Logo'); ?>" />
         </a>
         <?php endif; ?>
       <?php endif; ?>
@@ -171,7 +171,7 @@
   </div>
 </main> <!-- /#main, /#main-wrapper -->
 <footer id="footer" class="footer">
-  <div class="inner">
+  <div class="container">
   <?php print render($page['footer']); ?>
   </div>
 </footer>

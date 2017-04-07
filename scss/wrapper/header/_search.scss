@@ -26,10 +26,21 @@
 
     &.search-toggle--small {
       display: inline-block;
+      position: absolute;
+      top: 2.2rem;
+      right: 2rem;
 
       @media #{$medium-ish} {
         display: none;
       }
+    }
+
+    &.opened {
+      background-image: image-url('search_active.svg');
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -37,5 +48,23 @@
     &.closed {
       display: none;
     }
+
+    &.opened {
+      background-color: $mmg-light-gray;
+      border: 1px solid $mmg-gray;
+      padding: 1.5rem;
+      position: absolute;
+      left: 0;
+      top: 7.3rem;
+      width: 100%;
+
+      @media #{$medium-ish} {
+        top: 8.5rem;
+      }
+    }
+  }
+
+  input[id^=edit-search-block-form] {
+    width: calc(100% - 6rem);
   }
 }

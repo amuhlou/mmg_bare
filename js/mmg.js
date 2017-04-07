@@ -12,7 +12,7 @@ Drupal.behaviors.mmgMenu = {
   attach: function(context, settings) { // jshint ignore:line
     // menu related functionality
     $('.nav-toggle').click(function(){
-      $('#nav-menus').toggleClass('closed opened');
+      $('#header-menus-small .menu-wrapper').toggleClass('closed opened');
       $(this).toggleClass('is-active');
     });
   }
@@ -23,7 +23,9 @@ Drupal.behaviors.vsoSearch = {
     // search toggle
     $('.search-toggle').click(function(){
       $('.search-wrap').toggleClass('closed opened');
-      $(this).toggleClass('closed opened');
+      $('.search-toggle').each(function(){
+        $(this).toggleClass('closed opened');
+      });
     });
 
     $('#block-search-form .form-type-textfield input').keypress(function(event){

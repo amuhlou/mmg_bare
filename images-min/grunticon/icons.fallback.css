@@ -4,3 +4,7 @@
 
 .icon-search { background-image: url('png/search.png'); background-repeat: no-repeat; }
 
+.icon-search_active { background-image: url('png/search_active.png'); background-repeat: no-repeat; }
+
+.icon-x_icon { background-image: url('png/x_icon.png'); background-repeat: no-repeat; }
+

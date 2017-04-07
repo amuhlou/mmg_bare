@@ -1,1 +1,6 @@
-//
+#footer {
+  > .container {
+    @extend %container-1170;
+    padding: 1rem;
+  }
+}
