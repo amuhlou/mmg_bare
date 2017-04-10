@@ -2,7 +2,7 @@ MMG Bare Subtheme:
 
 This is an MMG-flavored subtheme. Inspired by Bare (https://github.com/timodwhit/bare), but with some additions to help build out MMG sites with more ease and efficiency.
 
-This theme uses Grunt (see Gruntfile.js), Compass (see _scss/base/libraries.scss), and Bundler.
+This theme uses Grunt (see Gruntfile.js), Compass (see scss/base/_libraries.scss), and Bundler.
 You may need to install these.
 
 Themer Tips, in no particular order:
