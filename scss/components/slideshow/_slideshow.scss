@@ -1,5 +1,7 @@
 .asset-slideshow {
   // configure at scss/base/_mixins.scss
+  // you may to need a .slick-arrows div into your template
+  // such as assets/asset-slideshow.tpl.php
   .slick-arrows {
     @include slick-defaults();
     position: relative;
