@@ -34,23 +34,21 @@ function mmg_bare_preprocess_html(&$vars) {
 
 function mmg_bare_preprocess_page(&$vars) {
   $vars['logo_header'] = drupal_get_path('theme', 'mmg_bare') . '/mmg_logo.png';
+  // SVG Logo Option: Deleate above line & uncomment below to use svg logo instead
+  // $vars['logo_header'] = file_get_contents(drupal_get_path('theme', 'mmg_bare') . '/images-min/logo.svg');
+
   // Render Main Menu - twice
   // One for desktop, one for mobile
-  $main_menu_tree = menu_tree_all_data('main-menu');
-  $main_menu_nav = menu_tree_output($main_menu_tree);
-  $vars['main_menu_small'] = $main_menu_nav;
-  $main_menu_tree_large = menu_tree_all_data('main-menu');
-  $main_menu_nav_large = menu_tree_output($main_menu_tree_large);
-  $vars['main_menu_large'] = $main_menu_nav_large;
+  $main_menu = menu_tree_output(menu_tree_all_data('main-menu'));
+  $vars['main_menu_large'] = $main_menu;
+  $vars['main_menu_small'] = $main_menu;
 
-  // Render Quick Links Menu
+  // Render Quick Links Menu - twice
+  // One for desktop, one for mobile
   // Replace 'main-menu' with the machine name of your secondary menu
-  $header_secondary_menu_tree = menu_tree_all_data('user-menu');
-  $header_secondary_menu_nav = menu_tree_output($header_secondary_menu_tree);
-  $vars['secondary_menu_small'] = $header_secondary_menu_nav;
-  $header_secondary_menu_tree_desktop = menu_tree_all_data('user-menu');
-  $header_secondary_menu_desktop = menu_tree_output($header_secondary_menu_tree_desktop);
-  $vars['secondary_menu_large'] = $header_secondary_menu_desktop;
+  $secondary_menu = menu_tree_output(menu_tree_all_data('user-menu'));
+  $vars['secondary_menu_small'] = $secondary_menu;
+  $vars['secondary_menu_large'] = $secondary_menu;
 
   // Search form.
   $search_form = block_load('search', 'form');
@@ -168,12 +166,6 @@ function mmg_bare_pager($vars) {
   }
 }
 
-/**
- * Implements theme_menu_tree()
- */
-function mmg_bare_menu_tree__main_menu(&$vars) {
-  return '<div class="menu-wrap"><ul class="menu links" >' . $vars['tree'] . '</ul></div>';
-}
 /**
  * Implements theme_menu_link()
  */
