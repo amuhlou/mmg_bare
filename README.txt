@@ -3,7 +3,7 @@ MMG Bare Subtheme:
 This is an MMG-flavored subtheme. Inspired by Bare, but with some additions to help build out MMG
 sites with more ease and efficiency.
 
-This theme uses Grunt (see Gruntfile.js), Compass, and Bundler. You may need to
+This theme uses Grunt (see Gruntfile.js), Compass (see _scss/base/libraries.scss), and Bundler. You may need to
 install these.
 
 Themer Tips:
@@ -14,10 +14,10 @@ Themer Tips:
 In scss/base/_variables.scss there are some pre-defined 'mmg' colors & fonts.
 Create your own based your site's style guide.
 
-3) Instead of having an empty page.tpl.php, mobile & desktop nav
-styling is in place. It might need some tweaks for your site
+3) Mobile bile & desktop nav styling is in place. It might need some tweaks for your site
 but it works out of the box. The theme renders your main & secondary menus twice
-for desktop vs mobile layouts. See js/mmg.js for the nav toggle functionality.
+for desktop & mobile layouts. See js/mmg.js for the nav toggle functionality
+& page.tpl.php for the structure.
 
 4) The Secondary menu is currently using the 'user' menu.
 Change it to whatever your secondary menu's machine name is in template.php, line 49

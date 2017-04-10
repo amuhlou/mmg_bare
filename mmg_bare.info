@@ -1,7 +1,7 @@
-name = MMG Bare (Bare Subtheme)
-description = This subtheme of the bare base theme. This theme is to act as a skelton for awesomeness
+name = MMG Starter
+description = A theme for MMG sites with hopefully just enough to help but not get in your way. Inspired by the bare theme/subtheme (https://github.com/timodwhit/bare)
 core = 7.x
-base = bare
+
 
 stylesheets[all][] = css/fonts/fonts.css
 stylesheets[all][] = css/style.css

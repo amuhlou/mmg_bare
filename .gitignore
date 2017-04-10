@@ -7,3 +7,4 @@
 .sass-cache*
 Gemfile.lock
 node_modules
+scss-lint-report.xml
