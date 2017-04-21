@@ -37,7 +37,7 @@ h1 {
   color: $h1-color;
   line-height: $h1-line-height;
   margin: $h1-margin;
-  text-align: center;
+  font-family: $h1-family;
 }
 
 h2 {
@@ -45,7 +45,7 @@ h2 {
   color: $h2-color;
   line-height: $h2-line-height;
   margin: $h2-margin;
-  text-align: center;
+  font-family: $h2-family;
 }
 
 h3 {
@@ -53,6 +53,7 @@ h3 {
   color: $h3-color;
   line-height: $h3-line-height;
   margin: $h3-margin;
+  font-family: $h3-family;
 }
 
 h4 {
@@ -60,6 +61,7 @@ h4 {
   color: $h4-color;
   line-height: $h4-line-height;
   margin: $h4-margin;
+  font-family: $h4-family;
 }
 
 h5 {
@@ -67,6 +69,7 @@ h5 {
   color: $h5-color;
   line-height: $h5-line-height;
   margin: $h5-margin;
+  font-family: $h5-family;
 }
 
 h6 {
@@ -74,4 +77,5 @@ h6 {
   color: $h6-color;
   line-height: $h6-line-height;
   margin: $h6-margin;
+  font-family: $h6-family;
 }

@@ -72,9 +72,6 @@
  * @ingroup themeable
  */
 ?>
-<div id="skip-link">
-  <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
-</div>
 <header id="header" class="wrapper clearfix">
   <div class="container clearfix">
     <?php print render($page['header']); ?>
