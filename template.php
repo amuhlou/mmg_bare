@@ -33,7 +33,7 @@ function mmg_bare_preprocess_html(&$vars) {
 }
 
 function mmg_bare_preprocess_page(&$vars) {
-  $vars['logo_header'] = drupal_get_path('theme', 'mmg_bare') . '/mmg_logo.png';
+  $vars['logo_header'] = drupal_get_path('theme', 'mmg_bare') . '/logo.png';
   // SVG Logo Option: Deleate above line & uncomment below to use svg logo instead
   // $vars['logo_header'] = file_get_contents(drupal_get_path('theme', 'mmg_bare') . '/images-min/logo.svg');
 
