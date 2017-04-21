@@ -103,11 +103,11 @@
       <?php if ($logo_header): ?>
         <?php if ($site_name): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t($site_name .': Home'); ?>" rel="home" id="logo">
-          <img src="/<?php print $logo_header; ?>" alt="<?php print $site_name . t('Logo'); ?>" />
+          <?php print $logo_header; ?>
         </a>
         <?php else: ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="/<?php print $logo_header; ?>" alt="<?php print t('Logo'); ?>" />
+          <?php print $logo_header; ?>
         </a>
         <?php endif; ?>
       <?php endif; ?>

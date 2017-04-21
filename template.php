@@ -33,9 +33,21 @@ function mmg_bare_preprocess_html(&$vars) {
 }
 
 function mmg_bare_preprocess_page(&$vars) {
-  $vars['logo_header'] = drupal_get_path('theme', 'mmg_bare') . '/logo.png';
-  // SVG Logo Option: Deleate above line & uncomment below to use svg logo instead
-  // $vars['logo_header'] = file_get_contents(drupal_get_path('theme', 'mmg_bare') . '/images-min/logo.svg');
+  // Set up path to your logo, png or svg
+  $logo_header_file = drupal_get_path('theme', 'mmg_bare') . '/logo.png';
+  // Uncomment below to use svg logo
+  // It's still a good idea to have a png version for maintenance pages.
+  //$logo_header_file = drupal_get_path('theme', 'mmg_bare') . '/images-min/logo.svg';
+  // Check file extension and render logo accordingly
+  if ($logo_header_file) {
+    $info = new SplFileInfo($logo_header_file);
+    if ($info->getExtension() == 'svg') {
+      $rendered_logo = file_get_contents($logo_header_file);
+    } else {
+      $rendered_logo = '<img src="/' . $logo_header_file . '" alt="' . variable_get('site_name') .  " " . t('Logo') .'"/>';
+    }
+    $vars['logo_header'] = $rendered_logo;
+  }
 
   // Render Main Menu - twice
   // One for desktop, one for mobile
