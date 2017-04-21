@@ -75,6 +75,7 @@
 <header id="header" class="wrapper clearfix">
   <div class="container clearfix">
     <?php print render($page['header']); ?>
+    <!-- Menus for small screens, hidden via css at large breakpoints  -->
     <section id="header-menus-small">
       <div class="menu-wrapper closed">
         <?php if ($main_menu_small): ?>
@@ -88,7 +89,7 @@
         </nav> <!-- /.section, /#navigation -->
         <?php endif; ?>
       </div>
-      <!-- Nav Toggle -->
+      <!-- Nav Toggle. Hidden at large breakpoints -->
       <button type="button" class="nav-toggle hamburger hamburger--collapse">
         <span class="element-invisible">Show Menu</span>
         <span class="hamburger-box">
@@ -109,6 +110,7 @@
         <?php endif; ?>
       <?php endif; ?>
     </section> <!-- /.section, /#header-logo -->
+    <!-- //Small Screen Search toggle & form -->
     <?php if ($search_form): ?>
     <button type="button" class="search-toggle search-toggle--small closed"><span class="element-invisible">Search</span></button>
     <div class="search-wrap closed">
@@ -117,6 +119,8 @@
       </div>
     </div>
     <?php endif; ?>
+    <!-- // End Small Screen Search Toggle & Form -->
+    <!-- // Large Screen Menus, hidden at small breakpoints. Includes another instance of search -->
     <section id="header-menus-large">
       <div class="menu-wrapper">
         <?php if ($secondary_menu_large): ?>
@@ -134,6 +138,7 @@
         <?php endif; ?>
       </div>
     </section>
+    <!-- // End Large screen menus. -->
   </div> <!-- /.container, .clearfix -->
 </header> <!-- /.section, /#header -->
 
