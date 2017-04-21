@@ -43,6 +43,60 @@ li {
 }
 
 //
+// Pager
+//
+.item-list {
+  .pager {
+    text-align: left;
+
+    li {
+      margin-left: 0.5rem;
+
+      a {
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+
+    .pager-previous,
+    .pager-next {
+      a {
+        font-size: 0;
+        position: relative;
+
+        &::after {
+          @include svg-colorized($arrow, $mmg-dark-blue);
+          @include transform(rotate(180deg));
+          background-repeat: no-repeat;
+          background-size: 16px 12px;
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 13px;
+          left: -5px;
+          top: -10px;
+        }
+
+        &:hover::after {
+          @include svg-colorized($arrow, $mmg-orange);
+        }
+      }
+    }
+
+    .pager-next {
+      a {
+        &::after {
+          @include transform(rotate(0deg));
+          left: initial;
+          right: -3px;
+          top: -10px;
+        }
+      }
+    }
+  }
+}
+
+//
 // Nested Items
 //
 ul ul,
